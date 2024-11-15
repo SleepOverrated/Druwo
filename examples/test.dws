@@ -1,0 +1,34 @@
+# Define a function
+main:
+    PUSH str "Hello, World!"
+    PRINT
+
+
+for_10:
+    PUSH int 10
+    :start
+    DUP
+    PUSH int 0
+    JMPE end
+
+    DUP
+    PUSH str "Countdown: "
+    SWAP
+    PRINT
+    DEC
+    JMP start
+
+    :end
+
+
+example:
+    PUSH int 1
+    PUSH int 2
+    ADD
+    PUSH str "Result: "
+    ADD
+    PRINT
+    RETURN
+
+
+
